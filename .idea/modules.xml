@@ -4,10 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KunstmaanShakerMenu.iml" filepath="$PROJECT_DIR$/KunstmaanShakerMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/KunstmaanShakerMenu/KunstmaanShakerMenu-KunstmaanShakerMenu.iml" filepath="$PROJECT_DIR$/KunstmaanShakerMenu/KunstmaanShakerMenu-KunstmaanShakerMenu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PopupLibrary.iml" filepath="$PROJECT_DIR$/PopupLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/KunstmaanShakerMenu/shakepopup.iml" filepath="$PROJECT_DIR$/KunstmaanShakerMenu/shakepopup.iml" />
     </modules>
   </component>
 </project>

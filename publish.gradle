@@ -1,0 +1,94 @@
+
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'KunstmaanShakerMenu'
+
+    publishedGroupId = 'be.kunstmaan.android'
+    libraryName = 'kunstmaan-shaker-menu'
+    artifact = 'kunstmaan-shaker-menu'
+
+    libraryDescription = 'A small library to show a menu on Android by shaking your phone'
+
+    siteUrl = 'https://github.com/Kunstmaan/KunstmaanShakerMenu'
+    gitUrl = 'https://github.com/Kunstmaan/KunstmaanShakerMenu.git'
+
+    libraryVersion = '1.0.0'
+
+    licenseName = 'MIT License'
+    licenseUrl = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
+}
+
+group = publishedGroupId
+version = libraryVersion
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            packaging 'aar'
+            groupId publishedGroupId
+            artifactId artifact
+
+            name libraryName
+            description libraryDescription
+            url siteUrl
+
+            licenses {
+                license {
+                    name licenseName
+                    url licenseUrl
+                }
+            }
+            developers {
+            }
+            scm {
+                connection gitUrl
+                developerConnection gitUrl
+                url siteUrl
+            }
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+
+    configurations = ['archives']
+    pkg {
+        repo = bintrayRepo
+        name = bintrayName
+        desc = libraryDescription
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = allLicenses
+        dryRun = false
+        publish = true
+        override = false
+        publicDownloadNumbers = true
+        version {
+            desc = libraryDescription
+        }
+    }
+}
