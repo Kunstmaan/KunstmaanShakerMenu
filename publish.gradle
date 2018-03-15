@@ -2,26 +2,22 @@
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'be.kunstmaan.shakermenu'
+    bintrayName = 'KunstmaanShakerMenu'
 
-    publishedGroupId = 'be.test.me.test.ku'
-    libraryName = 'kunstmaanShaker'
-    artifact = 'kunstmaanShaker'
+    publishedGroupId = 'be.kunstmaan.android'
+    libraryName = 'kunstmaan-shaker-menu'
+    artifact = 'kunstmaan-shaker-menu'
 
-    libraryDescription = 'This view is a container that supports diagonal scroll and fling gesture. It is based on AOSP HorizontalScrollView.'
+    libraryDescription = 'A small library to show a menu on Android by shaking your phone'
 
     siteUrl = 'https://github.com/Kunstmaan/KunstmaanShakerMenu'
     gitUrl = 'https://github.com/Kunstmaan/KunstmaanShakerMenu.git'
 
-    libraryVersion = '0.3.4'
+    libraryVersion = '1.0.0'
 
-    developerId = 'michal'
-    developerName = 'michal'
-    developerEmail = 'mi@cha.l'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
+    licenseName = 'MIT License'
+    licenseUrl = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
 }
 
 group = publishedGroupId
@@ -45,11 +41,6 @@ install {
                 }
             }
             developers {
-                developer {
-                    id developerId
-                    name developerName
-                    email developerEmail
-                }
             }
             scm {
                 connection gitUrl
@@ -80,12 +71,9 @@ artifacts {
     archives sourcesJar
 }
 
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
 bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
 
     configurations = ['archives']
     pkg {
