@@ -1,1 +1,1 @@
-include ':app', ':KunstmaanShakerMenu'
+include ':app', ':kunstmaan-shaker-menu'
