@@ -93,6 +93,12 @@ public class KunstmaanShakerMenu {
         }
     }
 
+    public static void trigger(){
+        if(sShakeDetector != null){
+            shakeListener.hearShake();
+        }
+    }
+
     private static void init(Application application) {
         setupActivityGrabber(application);
         sSensorManager = (SensorManager) application.getApplicationContext().getSystemService(SENSOR_SERVICE);
