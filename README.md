@@ -13,7 +13,7 @@ Example project integrating this in the Android build process can be found here 
 in the `build.gradle` of your app, put:
 
 ```groovy
-implementation 'be.kunstmaan.shakermenu'
+implementation 'be.kunstmaan.android:kunstmaan-shaker-menu:1.0.0'
 // implementationDebug if needed only for debugging purposes
 ```
 

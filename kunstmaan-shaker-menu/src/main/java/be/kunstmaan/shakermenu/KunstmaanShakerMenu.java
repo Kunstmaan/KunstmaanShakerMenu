@@ -77,7 +77,7 @@ public class KunstmaanShakerMenu {
     private static String sTitle = "";
     private static int sAccelerationThreshold;
 
-    private static WeakReference<Activity> sActivity = null;
+    private static WeakReference<Activity> sActivity;
     private static ShakeDetector sShakeDetector;
     private static SensorManager sSensorManager;
 
@@ -98,7 +98,6 @@ public class KunstmaanShakerMenu {
             shakeListener.hearShake();
         }
     }
-
 
     private static void init(Application application) {
         setupActivityGrabber(application);
