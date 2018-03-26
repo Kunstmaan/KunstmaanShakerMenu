@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KunstmaanShakerMenu.iml" filepath="$PROJECT_DIR$/KunstmaanShakerMenu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/KunstmaanShakerMenu/KunstmaanShakerMenu-KunstmaanShakerMenu.iml" filepath="$PROJECT_DIR$/KunstmaanShakerMenu/KunstmaanShakerMenu-KunstmaanShakerMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kunstmaan-shaker-menu/KunstmaanShakerMenu-KunstmaanShakerMenu.iml" filepath="$PROJECT_DIR$/kunstmaan-shaker-menu/KunstmaanShakerMenu-KunstmaanShakerMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kunstmaan-shaker-menu/kunstmaan-shaker-menu.iml" filepath="$PROJECT_DIR$/kunstmaan-shaker-menu/kunstmaan-shaker-menu.iml" />
     </modules>
   </component>
 </project>

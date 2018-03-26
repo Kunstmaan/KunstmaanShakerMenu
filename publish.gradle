@@ -2,7 +2,7 @@
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'KunstmaanShakerMenu'
+    bintrayName = 'kunstmaan-shaker-menu'
 
     publishedGroupId = 'be.kunstmaan.android'
     libraryName = 'kunstmaan-shaker-menu'
@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/Kunstmaan/KunstmaanShakerMenu'
     gitUrl = 'https://github.com/Kunstmaan/KunstmaanShakerMenu.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.3'
 
     licenseName = 'MIT License'
     licenseUrl = 'https://opensource.org/licenses/MIT'
