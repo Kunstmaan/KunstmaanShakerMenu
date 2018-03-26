@@ -81,6 +81,24 @@ public class KunstmaanShakerMenu {
     private static ShakeDetector sShakeDetector;
     private static SensorManager sSensorManager;
 
+    public static void enable(){
+        if(sSensorManager != null && sShakeDetector != null){
+            sShakeDetector.start(sSensorManager);
+        }
+    }
+
+    public static void disable(){
+        if(sShakeDetector != null){
+            sShakeDetector.stop();
+        }
+    }
+
+    public static void trigger(){
+        if(sShakeDetector != null){
+            shakeListener.hearShake();
+        }
+    }
+
 
     private static void init(Application application) {
         setupActivityGrabber(application);
@@ -102,8 +120,8 @@ public class KunstmaanShakerMenu {
             builder.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
                     sRunnables.get(sNames.get(which)).run();
-                    sShakeDetector.start(sSensorManager);
                 }
             });
 
