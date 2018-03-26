@@ -102,8 +102,8 @@ public class KunstmaanShakerMenu {
             builder.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
                     sRunnables.get(sNames.get(which)).run();
-                    sShakeDetector.start(sSensorManager);
                 }
             });
 
